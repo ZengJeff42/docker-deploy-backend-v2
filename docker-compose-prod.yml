@@ -1,0 +1,7 @@
+services:
+  backend-prod:
+    image: zengjeff/234-deploylab-backend:prod
+    pull_policy: always
+    ports:
+      - "8083:8080"
+    restart: unless-stopped

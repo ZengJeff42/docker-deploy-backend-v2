@@ -28,6 +28,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/234-deploylab-backend:latest
+                ${{ secrets.DOCKER_HUB_USERNAME }}/234-deploylab-backend:${{ github.ref_name }}
 
       - name: Copy file via ssh password
         uses: appleboy/scp-action@v1
